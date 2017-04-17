@@ -1,0 +1,5 @@
+#!/bin/bash
+setxkbmap hr
+xinput set-prop 12 294 1
+exec i3
+
