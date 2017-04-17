@@ -1,3 +1,15 @@
+echo Installing all packages...
+
+echo Entering sudo...
+sudo -i
+  echo "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
+  pacman -Sy
+  pacman -S $( cat pacman-installed )
+
+exit
+
+echo Copying config files..
+
 cp -f ~/.config/i3/config ~/.config/i3/config.orig
 cp -f i3-config ~/.config/i3/config
 
@@ -14,10 +26,5 @@ cp -f Xresources ~/.Xresources
 
 cp -f xinitrc ~/.xinitrc
 
-echo Entering sudo...
-sudo -i
-echo "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
-
-exit
-
+echo Done.
 

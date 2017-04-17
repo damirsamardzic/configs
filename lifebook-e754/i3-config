@@ -200,3 +200,6 @@ focus_follows_mouse no
 exec--no-startup-id "dunst"
 exec--no-startup-id "parcellite -n"
 
+bindsym --release Print exec --no-startup-id scrot
+bindsym --release Shift+Print exec --no-startup-id scrot -s
+
