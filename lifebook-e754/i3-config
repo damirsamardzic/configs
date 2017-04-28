@@ -176,6 +176,8 @@ bindsym $mod+Escape mode "$mode_system"
 bindsym $mod+d exec "rofi -show drun -font 'snap 10'"
 bindsym $mod+Tab exec "rofi -show window -font 'snap 10'"
 
+for_window [class="Vlc"] floating enable
+
 exec --no-startup-id "pulseaudio --start"
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
