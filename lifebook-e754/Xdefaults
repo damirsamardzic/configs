@@ -5,11 +5,11 @@ URxvt*geometry:                115x40
 !URxvt*boldFont: xft:Inconsolata:bold:pixelsize=15:antialias=true:hinting=true
 URxvt*font: xft:Liberation Mono:pixelsize=12:antialias=true:hinting=true
 URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=true
-URxvt*depth:                24
+URxvt*depth: 24
 URxvt*borderless: 1
-URxvt*scrollBar:            false
-URxvt*saveLines:  2000
-URxvt.transparent:      true
+URxvt*scrollBar: false
+URxvt*saveLines: 2000
+URxvt.transparent: false
 URxvt*.shading: 10
 
 ! Meta modifier for keybindings
@@ -35,7 +35,7 @@ URxvt.iso14755_52: false
 
 !urxvt color scheme:
 
-URxvt*background: #2B2B2B
+URxvt*background: #000000
 URxvt*foreground: #DEDEDE
 
 URxvt*colorUL: #86a2b0
