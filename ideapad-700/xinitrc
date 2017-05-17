@@ -1,0 +1,11 @@
+#!/bin/bash
+
+setxkbmap hr
+xinput set-prop 12 294 1
+xinput set-prop 12 274 
+#xinput set-prop 13 294 1
+#compton -CGb
+feh --bg-scale Dropbox/Photos/Wallpapers/Cielo_estrellado_by_Eduardo_Diez_Viñuela.jpg
+
+exec i3
+
