@@ -155,7 +155,7 @@ bar {
         status_command i3status
 }
 
-set $Locker i3lock -c 000000 && sleep 1
+set $Locker i3lock -ec 000000 && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r)reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -177,6 +177,7 @@ bindsym $mod+d exec "rofi -show drun -font 'snap 10'"
 bindsym $mod+Tab exec "rofi -show window -font 'snap 10'"
 
 for_window [class="Vlc"] floating enable
+for_window [class="TeamViewer"] floating enable
 
 exec --no-startup-id "pulseaudio --start"
 # Pulse Audio controls
@@ -205,7 +206,7 @@ exec --no-startup-id "parcellite -n"
 # instead use systemctl enable devmon@damirs
 #exec --no-startup-id "devmon --no-gui"
 
-#exec --no-startup-id "sleep 5 && dropbox"
+#exec --no-startup-id "sleep 5 && dropbox start -i"
 
 bindsym --release Print exec --no-startup-id scrot
 bindsym --release Shift+Print exec --no-startup-id scrot -s
