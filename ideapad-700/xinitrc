@@ -1,9 +1,19 @@
 #!/bin/bash
 
 setxkbmap hr
-xinput set-prop 12 294 1
-xinput set-prop 12 274 1
-#xinput set-prop 13 294 1
+
+# libinput touchpad
+#xinput set-prop 12 292 1
+#xinput set-prop 12 288 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 292 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 288 1
+
+# synaptics touchpad
+synclient PalmDetect=1
+synclient TapButton1=1
+synclient TapButton2=3
+synclient TapButton3=2
+
 #compton -CGb --no-fading-openclose
 
 exec i3
