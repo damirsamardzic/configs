@@ -12,6 +12,15 @@ URxvt*saveLines: 2000
 URxvt.transparent: false
 URxvt*.shading: 10
 
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
 ! Meta modifier for keybindings
 !URxvt.modifier: super
 
