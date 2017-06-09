@@ -26,5 +26,7 @@ cp -f Xresources ~/.Xresources
 
 cp -f xinitrc ~/.xinitrc
 
+cp -ra screenlayout ~/.screenlayout
+
 echo Done.
 
