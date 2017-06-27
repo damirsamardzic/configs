@@ -162,9 +162,11 @@ set $Locker i3lock -ec 000000 && sleep 1
 bindsym $mod+l exec --no-startup-id $Locker
 
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r)reboot, (Shift+s) shutdown
-set $mode_system System (l) lock, (e) logout, (s) suspend, (r)reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (o) laptop-only, (e) logout, (s) suspend, (r)reboot, (Shift+s) shutdown
 mode "$mode_system" {
   bindsym l exec --no-startup-id $Locker, mode "default"
+  # run laptop-only.sh script to have only laptop display output
+  bindsym o exec --no-startup-id /home/damirs/.screenlayout/laptop-only.sh, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
   bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
   #bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
