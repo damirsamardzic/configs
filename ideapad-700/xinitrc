@@ -16,5 +16,7 @@ synclient TapButton3=2
 
 compton -CGb --no-fading-openclose
 
+eval $(ssh-agent)
+
 exec i3
 

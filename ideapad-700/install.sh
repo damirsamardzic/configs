@@ -28,5 +28,7 @@ cp -f xinitrc ~/.xinitrc
 
 cp -ra screenlayout ~/.screenlayout
 
+cp gitconfig ~/.gitconfig
+
 echo Done.
 

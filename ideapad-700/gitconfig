@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[user]
+	email = damir.samardzic@sartura.hr
+	name = Damir Samardzic
+[pull]
+	rebase = true
