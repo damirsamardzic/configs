@@ -3,7 +3,6 @@ echo Installing all packages...
 echo Entering sudo...
 sudo -i
   echo "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
-  pacman -Sy
   pacman -S $( cat pacman-installed )
 
 exit
