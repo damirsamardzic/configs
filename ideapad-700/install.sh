@@ -29,5 +29,7 @@ cp -ra screenlayout ~/.screenlayout
 
 cp gitconfig ~/.gitconfig
 
+cat aliases >> ~/.zshrc
+
 echo Done.
 

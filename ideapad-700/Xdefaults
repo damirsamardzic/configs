@@ -8,7 +8,7 @@ URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=tru
 URxvt*depth: 24
 URxvt*borderless: 1
 URxvt*scrollBar: false
-URxvt*saveLines: 2000
+URxvt*saveLines: 20000
 URxvt.transparent: false
 URxvt*.shading: 10
 

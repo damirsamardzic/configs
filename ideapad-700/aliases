@@ -1,0 +1,8 @@
+# my aliases
+alias vup="pactl set-sink-volume 0 +5%"
+alias vdown="pactl set-sink-volume 0 -5%"
+alias vmute="pactl set-sink-mute 0 toggle"
+
+alias gin="git fetch && git log --pretty=oneline --abbrev-commit ..@{u}"
+alias gout="git log --pretty=oneline --abbrev-commit @{u}.."
+
