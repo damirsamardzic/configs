@@ -183,6 +183,17 @@ mode "$mode_system" {
 
 bindsym $mod+Escape mode "$mode_system"
 
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+
+# The middle button and a modifer over any part of the window kills the window
+#bindsym --whole-window $mod+button2 kill
+
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+
+
 bindsym $mod+d exec "rofi -show drun -font 'snap 10'"
 bindsym $mod+Tab exec "rofi -show window -font 'snap 10'"
 
@@ -216,6 +227,7 @@ focus_follows_mouse no
 
 # wallpaper
 exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
+#exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/europe_night_2016.jpg"
 
 
 exec --no-startup-id "dunst"
