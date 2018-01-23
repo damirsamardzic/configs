@@ -159,6 +159,7 @@ bar {
 }
 
 set $Locker i3lock -ec 000000 && sleep 1
+#set $Locker i3lock -ef -c 000000 -i ~/Dropbox/Photos/Wallpapers/chokung-valley-lockscreen.png && sleep 1
 bindsym $mod+l exec --no-startup-id $Locker
 
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r)reboot, (Shift+s) shutdown
@@ -190,8 +191,8 @@ bindsym --release button2 kill
 #bindsym --whole-window $mod+button2 kill
 
 # The right button toggles floating
-bindsym button3 floating toggle
-bindsym $mod+button3 floating toggle
+#bindsym button3 floating toggle
+#bindsym $mod+button3 floating toggle
 
 
 bindsym $mod+d exec "rofi -show drun -font 'snap 10'"
@@ -199,6 +200,7 @@ bindsym $mod+Tab exec "rofi -show window -font 'snap 10'"
 
 for_window [class="Vlc"] floating enable
 for_window [class="TeamViewer"] floating enable
+#for_window [class="Virt-manager"] floating enable
 
 assign [class="qemu-system-i386"] 9
 
@@ -227,7 +229,7 @@ focus_follows_mouse no
 
 # wallpaper
 exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
-#exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/europe_night_2016.jpg"
+#exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/chokung-valley-wallpaper.jpg"
 
 
 exec --no-startup-id "dunst"
