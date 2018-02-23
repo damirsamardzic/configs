@@ -3,13 +3,14 @@
 export DISPLAY=:0
 export XAUTHORITY=/home/damirs/.Xauthority
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+export FEHBG=/home/damirs/.fehbg
 
-LOG=/tmp/hotplug.log
-#LOG=/dev/null
+#LOG=/tmp/hotplug.log
+LOG=/dev/null
 
 /usr/bin/sleep 2
 
-/bin/date 2>&1 >> $LOG
+#/bin/date 2>&1 >> $LOG
 
 #if [[ $(cat /sys/class/drm/card0-HDMI-A-1/status | grep -Ec "^connected") -eq 1 ]]; then
 #        echo "HDMI connected!" >> $LOG
@@ -30,4 +31,6 @@ function disconnect(){
 
 
 xrandr | grep "HDMI-1 connected" &> /dev/null && connect || disconnect
+
+[ -f $FEHBG ] && $FEHBG
 

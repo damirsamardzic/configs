@@ -228,8 +228,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 50 # decrease 
 focus_follows_mouse no
 
 # wallpaper
-exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
-#exec_always --no-startup-id "feh --bg-fill ~/Dropbox/Photos/Wallpapers/chokung-valley-wallpaper.jpg"
+#exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
+exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/chokung-valley-wallpaper.jpg"
 
 
 exec --no-startup-id "dunst"
