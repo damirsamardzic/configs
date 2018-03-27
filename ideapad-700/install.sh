@@ -32,4 +32,5 @@ cp gitconfig ~/.gitconfig
 cat aliases >> ~/.zshrc
 
 echo Done.
+echo "Now install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh/"
 

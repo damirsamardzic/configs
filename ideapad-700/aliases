@@ -6,3 +6,8 @@ alias vmute="pactl set-sink-mute 0 toggle"
 alias gin="git fetch && git log --pretty=oneline --abbrev-commit ..@{u}"
 alias gout="git log --pretty=oneline --abbrev-commit @{u}.."
 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+export FZF_DEFAULT_OPTS='--height 30% --reverse --border'
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview' --exact"
+
