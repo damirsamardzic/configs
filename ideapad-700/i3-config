@@ -158,8 +158,15 @@ bar {
         status_command i3status
 }
 
+
+# wallpaper and lockscreen images
+# copy desired files over these and restart i3
+set $wallimage ~/.config/wallimage
+set $lockimage ~/.config/lockimage
+
+
 set $Locker i3lock -ec 000000 && sleep 1
-#set $Locker i3lock -ef -c 000000 -i ~/Dropbox/Photos/Wallpapers/chokung-valley-lockscreen.png && sleep 1
+#set $Locker i3lock -ef -c 000000 -i $lockimage && sleep 1
 bindsym $mod+l exec --no-startup-id $Locker
 
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r)reboot, (Shift+s) shutdown
@@ -204,6 +211,7 @@ for_window [class="TeamViewer"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 #for_window [class="Virt-manager"] floating enable
 
+assign [class="Xsane"] 8
 assign [class="qemu-system-i386"] 9
 
 exec --no-startup-id "pulseaudio --start"
@@ -231,7 +239,7 @@ focus_follows_mouse no
 
 # wallpaper
 #exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
-exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/chokung-valley-wallpaper.jpg"
+exec_always --no-startup-id "feh --bg-fill --bg-fill $wallimage"
 
 
 exec --no-startup-id "dunst"
