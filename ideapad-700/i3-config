@@ -202,11 +202,12 @@ bindsym --release button2 kill
 #bindsym $mod+button3 floating toggle
 
 
-bindsym $mod+d exec "rofi -show drun -font 'snap 10'"
-bindsym $mod+Shift+d exec "rofi -show drun -font 'snap 10' -run-command 'gksudo {cmd}'"
-bindsym $mod+Tab exec "rofi -show window -font 'snap 10'"
+bindsym $mod+d exec "rofi -show drun -font 'DejaVu Sans Mono 10'"
+bindsym $mod+Shift+d exec "rofi -show drun -font 'DejaVu Sans Mono 10' -run-command 'gksudo {cmd}'"
+bindsym $mod+Tab exec "rofi -show window -font 'DejaVu Sans Mono 10'"
 
 for_window [class="vlc"] floating enable
+for_window [class="mpv"] floating enable
 for_window [class="TeamViewer"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 #for_window [class="Virt-manager"] floating enable
