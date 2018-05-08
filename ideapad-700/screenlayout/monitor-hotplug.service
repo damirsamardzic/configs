@@ -1,0 +1,9 @@
+[Unit]
+Description=Monitor hotplug
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/su - damirs -c /home/damirs/.screenlayout/hotplug.sh
+
+[Install]
+WantedBy=multi-user.target

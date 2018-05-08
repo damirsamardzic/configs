@@ -13,6 +13,7 @@ synclient PalmDetect=1
 synclient TapButton1=1
 synclient TapButton2=3
 synclient TapButton3=2
+syndaemon -i 0.4 -t -K -R &
 
 compton -CGb --no-fading-openclose
 

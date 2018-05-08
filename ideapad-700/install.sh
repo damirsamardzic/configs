@@ -1,11 +1,7 @@
 echo Installing all packages...
 
-echo Entering sudo...
-sudo -i
-  echo "HandleLidSwitch=ignore" >> /etc/systemd/logind.conf
-  pacman -S $( cat pacman-installed )
-
-exit
+echo "HandleLidSwitch=ignore" >> sudo tee -a /etc/systemd/logind.conf
+sudo pacman -S $( cat pacman-installed ) || exit 1
 
 echo Copying config files..
 
@@ -31,8 +27,7 @@ cp -ra screenlayout ~/.screenlayout
 
 cp gitconfig ~/.gitconfig
 
-cat aliases >> ~/.zshrc
-
 echo Done.
 echo "Now install oh-my-zsh from https://github.com/robbyrussell/oh-my-zsh/"
+echo "and then perform: # cat aliases >> ~/.zshrc"
 
