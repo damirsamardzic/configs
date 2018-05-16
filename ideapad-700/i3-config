@@ -191,6 +191,9 @@ mode "$mode_system" {
 
 bindsym $mod+Escape mode "$mode_system"
 
+#change monitor layout Fn key, which is Super+p
+bindsym Mod4+p exec --no-startup-id /home/damirs/.screenlayout/hotplug.sh
+
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
 
@@ -206,7 +209,7 @@ bindsym $mod+d exec "rofi -show drun -font 'DejaVu Sans Mono 10'"
 bindsym $mod+Shift+d exec "rofi -show drun -font 'DejaVu Sans Mono 10' -run-command 'gksudo {cmd}'"
 bindsym $mod+Tab exec "rofi -show window -font 'DejaVu Sans Mono 10'"
 
-for_window [class="vlc"] floating enable
+for_window [instance="vlc"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="TeamViewer"] floating enable
 for_window [class="Gnome-calculator"] floating enable
