@@ -1,6 +1,7 @@
 #!/bin/bash
 
 setxkbmap hr
+xset r rate 400
 
 # libinput touchpad
 #xinput set-prop 12 292 1

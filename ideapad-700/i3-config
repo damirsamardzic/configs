@@ -233,8 +233,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # verify: ll /sys/class/backlight/intel_backlight
 # gcc -o brightlight brightlight.c -lbsd
 # chmod u+s brightlight
-bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 50 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 50 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 34 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 34 # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
