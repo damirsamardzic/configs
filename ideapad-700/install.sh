@@ -30,4 +30,9 @@ cp gitconfig ~/.gitconfig
 echo Done.
 echo "Now install oh-my-zsh from https://github.com/robbyrussell/oh-my-zsh/"
 echo "and then perform: # cat aliases >> ~/.zshrc"
+echo
+echo "Additional flags in /etc/default/grub (note: resume is swap partition uuid):"
+echo " resume=UUID=b65f29dc-6bd8-46c4-ab9a-a493c5b3f1b2 i915.enable_guc=-1 i915.semaphores=1"
+echo "and rebuild grub conf: # sudo grub-mkconfig -o /boot/grub/grub.cfg"
+echo
 

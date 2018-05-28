@@ -211,6 +211,7 @@ bindsym $mod+Tab exec "rofi -show window -font 'DejaVu Sans Mono 10'"
 
 for_window [instance="vlc"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="Plexamp"] floating enable
 for_window [class="TeamViewer"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 #for_window [class="Virt-manager"] floating enable
@@ -225,6 +226,14 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% #increase sou
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# $mod+ž play/pause
+bindsym --release $mod+zcaron exec --no-startup-id xdotool key --clearmodifiers XF86AudioPlay
+# $mod+č previous
+bindsym --release $mod+ccaron exec --no-startup-id xdotool key --clearmodifiers XF86AudioPrev
+# $mod+ć next
+bindsym --release $mod+cacute exec --no-startup-id xdotool key --clearmodifiers XF86AudioNext
+
 
 # Sreen brightness controls
 # git clone http://github.com/multiplexd/brightlight
