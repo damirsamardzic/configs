@@ -1,6 +1,7 @@
 #!/bin/bash
 
 setxkbmap hr
+setxkbmap -option terminate:ctrl_alt_bksp
 xset r rate 400
 
 # libinput touchpad

@@ -205,9 +205,9 @@ bindsym --release button2 kill
 #bindsym $mod+button3 floating toggle
 
 
-bindsym $mod+d exec "rofi -show drun -font 'DejaVu Sans Mono 10'"
-bindsym $mod+Shift+d exec "rofi -show drun -font 'DejaVu Sans Mono 10' -run-command 'gksudo {cmd}'"
-bindsym $mod+Tab exec "rofi -show window -font 'DejaVu Sans Mono 10'"
+bindsym $mod+d exec --no-startup-id "rofi -show drun -font 'DejaVu Sans Mono 10'"
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -font 'DejaVu Sans Mono 10' -run-command 'gksudo {cmd}'"
+bindsym $mod+Tab exec --no-startup-id "rofi -show window -font 'DejaVu Sans Mono 10'"
 
 for_window [instance="vlc"] floating enable
 for_window [class="mpv"] floating enable
@@ -249,6 +249,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 34 # decrease 
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
 
 focus_follows_mouse no
+
+# toggle window border
+bindsym $mod+b exec i3-msg border toggle
 
 # wallpaper
 #exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
