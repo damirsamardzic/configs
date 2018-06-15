@@ -1,7 +1,7 @@
 echo Installing all packages...
 
 echo "HandleLidSwitch=ignore" >> sudo tee -a /etc/systemd/logind.conf
-sudo pacman -S $( cat pacman-installed ) || exit 1
+sudo pacman -S "$( cat pacman-installed )" || exit 1
 
 echo Copying config files..
 

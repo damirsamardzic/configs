@@ -11,3 +11,6 @@ source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS='--height 30% --reverse --border'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview' --exact --no-sort"
 
+export VISUAL=vim
+export EDITOR=vim
+

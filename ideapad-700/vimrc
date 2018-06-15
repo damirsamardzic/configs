@@ -3,7 +3,7 @@ filetype plugin on
 filetype indent on
 syntax on
 set number
-"set mouse=a
+set mouse=a
 set nobackup
 set nowb
 set noswapfile
@@ -41,4 +41,20 @@ set tabstop=4
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 set belloff=all
 set scrolloff=10
+
+" vim-plug, install: curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+
+call plug#end()
+
+" plugin configs
+set laststatus=2
+map <C-n> :NERDTreeToggle<CR>
+let g:syntastic_check_on_open = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 
