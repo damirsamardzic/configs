@@ -15,6 +15,8 @@ order += "ipv6"
 order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
+order += "run_watch Docker"
+order += "run_watch SSH"
 order += "battery all"
 order += "load"
 order += "volume master"
@@ -51,4 +53,10 @@ volume master {
 }
 disk "/" {
         format = "%avail"
+}
+run_watch Docker {
+	pidfile = "/run/docker.pid"
+}
+run_watch SSH {
+	pidfile = "/run/sshd.pid"
 }

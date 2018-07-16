@@ -5,3 +5,12 @@
 	name = Damir Samardzic
 [pull]
 	rebase = true
+[alias]
+	incoming = !git fetch && git log --pretty=oneline --abbrev-commit ..@{u}
+	outgoing = log --pretty=oneline --abbrev-commit @{u}..
+[credential "https://github.com"]
+	username = damirsamardzic
+[credential "https://bitbucket.org"]
+	username = damirsamardzic@gmail.com
+[core]
+	editor = vim
