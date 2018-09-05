@@ -27,6 +27,9 @@ cp -ra screenlayout ~/.screenlayout
 
 cp gitconfig ~/.gitconfig
 
+cp -f i3tree ~/.i3tree
+chmod +x ~/.i3tree
+
 sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
 
 echo Done.
