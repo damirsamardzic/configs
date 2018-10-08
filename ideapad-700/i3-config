@@ -200,7 +200,7 @@ mode "$mode_keymap" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-bindsym $mod+t mode "$mode_keymap"
+bindsym $mod+k mode "$mode_keymap"
 
 #change monitor layout Fn key, which is Super+p
 bindsym Mod4+p exec --no-startup-id /home/damirs/.screenlayout/hotplug.sh
@@ -230,6 +230,7 @@ for_window [class="Gnome-calculator"] floating enable
 assign [class="Xsane"] 8
 assign [class="qemu-system-i386"] 9
 
+#exec --no-startup-id "pasystray"
 #exec --no-startup-id "pulseaudio --start"
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% || pactl set-sink-volume 1 +5% #increase sound volume
@@ -245,7 +246,7 @@ bindsym --release $mod+ccaron exec --no-startup-id xdotool key --clearmodifiers 
 # $mod+ć next
 bindsym --release $mod+cacute exec --no-startup-id xdotool key --clearmodifiers XF86AudioNext
 
-bindsym $mod+k exec zenity --calendar
+bindsym $mod+c exec zenity --calendar
 
 # Sreen brightness controls
 # git clone http://github.com/multiplexd/brightlight
