@@ -30,6 +30,8 @@ cp gitconfig ~/.gitconfig
 cp -f i3tree ~/.i3tree
 chmod +x ~/.i3tree
 
+cp -f ckermit-ttyUSB0 ~/.ckermit-ttyUSB0
+
 sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
 
 echo Done.
