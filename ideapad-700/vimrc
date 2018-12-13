@@ -48,7 +48,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 "Plug 'vim-airline/vim-airline'
 
 call plug#end()
@@ -56,9 +56,9 @@ call plug#end()
 " plugin configs
 set laststatus=2
 map <C-n> :NERDTreeToggle<CR>
-let g:syntastic_check_on_open = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 "let g:airline#extensions#tabline#enabled = 1
 let g:lightline#bufferline#show_number  = 1
 let g:lightline#bufferline#shorten_path = 0
