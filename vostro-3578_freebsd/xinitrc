@@ -1,0 +1,17 @@
+#!/bin/bash
+xrdb -merge .Xresources
+
+setxkbmap hr
+
+# libinput touchpad
+#xinput set-prop 12 292 1
+#xinput set-prop 12 288 1
+#xinput set-prop 'SynPS/2 Synaptics TouchPad' 292 1
+#xinput set-prop 'SynPS/2 Synaptics TouchPad' 288 1
+
+#compton -CGb --no-fading-openclose
+
+eval $(ssh-agent)
+
+exec i3
+
