@@ -255,7 +255,7 @@ bindsym --release $mod+ccaron exec --no-startup-id xdotool key --clearmodifiers 
 # $mod+ć next
 bindsym --release $mod+cacute exec --no-startup-id xdotool key --clearmodifiers XF86AudioNext
 
-bindsym $mod+c exec zenity --calendar
+bindsym $mod+c exec gsimplecal || zenity --calendar
 
 # Sreen brightness controls
 # git clone http://github.com/multiplexd/brightlight

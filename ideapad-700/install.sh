@@ -15,6 +15,9 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 mkdir -p ~/.config/i3status
 cp -f i3status-config ~/.config/i3status/config
 
+mkdir -p ~/.config/termite
+cp -f termite-config ~/.config/termite/config
+
 cp -f Xdefaults ~/.Xdefaults
 
 cp -f Xresources ~/.Xresources
@@ -42,4 +45,6 @@ echo "Additional flags in /etc/default/grub (note: resume is swap partition uuid
 echo " resume=UUID=b65f29dc-6bd8-46c4-ab9a-a493c5b3f1b2 i915.enable_guc=-1 i915.semaphores=1"
 echo "and rebuild grub conf: # sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo
+echo "Add the following to /etc/environment when using just window manager:"
+echo "NO_AT_BRIDGE=1"
 

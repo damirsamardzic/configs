@@ -8,6 +8,8 @@ alias gout="git log --pretty=oneline --abbrev-commit @{u}.."
 
 alias find-broken="find . -type l ! -exec test -e {} \; -print"
 
+alias ls="ls --color=tty --group-directories-first"
+
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS='--height 30% --reverse --border'

@@ -2,6 +2,8 @@
     font = "DejaVu Sans Mono 9"
     markup = full
     format = "<b>%s</b>\n%b"
+    icon_position = left
+    max_icon_size = 40
     sort = yes
     indicate_hidden = yes
     alignment = left
@@ -9,7 +11,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "320x5-6+30"
+    geometry = "340x5-6+30"
     transparency = 10
     idle_threshold = 120
     follow = keyboard
