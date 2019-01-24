@@ -81,7 +81,7 @@ URxvt*color13 : #AD7FA8
 URxvt*color6  : #06989A
 URxvt*color14 : #34E2E2
 ! white
-URxvt*color7  : #D3D7CF
+URxvt*color7  : #DEDEDE
 URxvt*color15 : #EEEEEC
 
 URxvt.secondaryScreen: 1

@@ -47,4 +47,6 @@ echo "and rebuild grub conf: # sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo
 echo "Add the following to /etc/environment when using just window manager:"
 echo "NO_AT_BRIDGE=1"
-
+echo
+echo "Set keyboard layout with localectl, ie. localectl set-x11-keymap hr"
+echo
