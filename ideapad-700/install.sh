@@ -18,9 +18,8 @@ cp -f i3status-config ~/.config/i3status/config
 mkdir -p ~/.config/termite
 cp -f termite-config ~/.config/termite/config
 
-cp -f Xdefaults ~/.Xdefaults
-
 cp -f Xresources ~/.Xresources
+ln -sf ~/.Xresources ~/.Xdefaults
 
 cp -f xinitrc ~/.xinitrc
 
