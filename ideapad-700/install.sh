@@ -14,6 +14,8 @@ cp -f dunstrc ~/.config/dunst/dunstrc
 
 mkdir -p ~/.config/i3status
 cp -f i3status-config ~/.config/i3status/config
+cp -f i3status.sh ~/.config/i3status/
+chmod +x ~/.config/i3status/i3status.sh
 
 mkdir -p ~/.config/termite
 cp -f termite-config ~/.config/termite/config

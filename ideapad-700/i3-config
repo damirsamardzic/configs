@@ -164,7 +164,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command ~/.config/i3status/i3status.sh || i3status
 }
 
 
@@ -264,8 +264,8 @@ bindsym $mod+c exec gsimplecal || zenity --calendar
 # verify: ll /sys/class/backlight/intel_backlight
 # gcc -o brightlight brightlight.c -lbsd
 # chmod u+s brightlight
-bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 17 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 17 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 12 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 12 # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
