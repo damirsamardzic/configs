@@ -15,4 +15,4 @@ set parity none
 ;set session-log binary
 ;log session /tmp/ckermit-USB0.log
 connect
-
+exit
