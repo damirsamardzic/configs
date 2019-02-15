@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Get default sink name
+get_default_sink_name() {
+    pacmd stat | awk -F": " '/^Default sink name: /{print $2}'
+}
+
+# Get the volume as a percentage.
+get_volume() {
+    get_volume_pulseaudio $sink
+}
+
+# Get the volume as a percentage.
+#
+# Arguments
+#   Sink name   (string) Symbolic name of sink.
+get_volume_pulseaudio() {
+    local sink="$1"
+    local muted="$(pacmd list-sinks|awk -W posix '/^[ \t]+name: /{insink = $2 == "<'$sink'>"} /^[ \t]+muted: / && insink {print $2; exit}')"
+	local volume="$(pacmd list-sinks|awk -W posix '/^[ \t]+name: /{insink = $2 == "<'$sink'>"} /^[ \t]+volume: / && insink {print $5; exit}' )"
+    [ Xno = X$muted ] && echo "Master volume:  $volume" || echo "Master volume:  muted"
+}
+
+# main 
+sink=""
+muted=""
+sink="$(get_default_sink_name)"
+get_volume || true
+
+exit 0
+

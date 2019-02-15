@@ -242,11 +242,14 @@ assign [class="qemu-system-i386"] 9
 #exec --no-startup-id "pasystray"
 #exec --no-startup-id "pulseaudio --start"
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% || pactl set-sink-volume 1 +5% #increase sound volume
-bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% || pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% || pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% || pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# increase volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% || pactl set-sink-volume 1 +5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% || pactl set-sink-volume 1 +5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+# decrease volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% || pactl set-sink-volume 1 -5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% || pactl set-sink-volume 1 -5%  && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+# mute volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
 
 # $mod+ž play/pause
 bindsym --release $mod+zcaron exec --no-startup-id xdotool key --clearmodifiers XF86AudioPlay
@@ -264,8 +267,8 @@ bindsym $mod+c exec gsimplecal || zenity --calendar
 # verify: ll /sys/class/backlight/intel_backlight
 # gcc -o brightlight brightlight.c -lbsd
 # chmod u+s brightlight
-bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 12 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 12 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 12 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 12 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad

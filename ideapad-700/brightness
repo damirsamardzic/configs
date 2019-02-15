@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# brightlight -r -p | awk '{gsub("%.", "%"); print $5}'
+
+lcdstat="$(( $(cat /sys/class/backlight/intel_backlight/actual_brightness ) * 100 / $(cat /sys/class/backlight/intel_backlight/max_brightness) ))%"
+echo Laptop brightness:  $lcdstat
+exit 0
