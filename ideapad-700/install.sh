@@ -7,6 +7,8 @@ echo Copying config files..
 
 cp -f ~/.config/i3/config ~/.config/i3/config.orig
 cp -f i3-config ~/.config/i3/config
+cp -f pavolume ~/.config/i3/
+cp -f brightness ~/.config/i3/
 
 mkdir -p ~/.config/dunst
 cp -f ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc.orig
