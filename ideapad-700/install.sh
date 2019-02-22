@@ -26,6 +26,7 @@ cp -f Xresources ~/.Xresources
 ln -sf ~/.Xresources ~/.Xdefaults
 
 cp -f xinitrc ~/.xinitrc
+cp -f xprofile ~/.xprofile
 
 cp -f vimrc ~/.vimrc
 
@@ -52,4 +53,6 @@ echo "Add the following to /etc/environment when using just window manager:"
 echo "NO_AT_BRIDGE=1"
 echo
 echo "Set keyboard layout with localectl, ie. localectl set-x11-keymap hr"
+echo
+echo "Check lightdm* configs and apply changes in /etc/lightdm/"
 echo

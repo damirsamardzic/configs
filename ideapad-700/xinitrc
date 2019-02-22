@@ -22,4 +22,5 @@ compton -CGb --no-fading-openclose
 eval $(ssh-agent)
 
 exec i3
+#exec awesome
 
