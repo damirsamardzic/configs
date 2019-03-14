@@ -11,6 +11,7 @@ LOG=/dev/null
 #LOG=/tmp/hotplug.log
 #date >> $LOG
 
+sync
 /usr/bin/sleep 1
 
 function connect(){
