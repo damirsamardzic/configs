@@ -41,6 +41,8 @@ cp -f ckermit-ttyUSB0 ~/.ckermit-ttyUSB0
 
 sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
 
+cp -f compton.conf ~/.config/
+
 echo Done.
 echo "Now install oh-my-zsh from https://github.com/robbyrussell/oh-my-zsh/"
 echo "and then perform: # cat aliases >> ~/.zshrc"

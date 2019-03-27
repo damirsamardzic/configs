@@ -8,7 +8,7 @@ synclient TapButton3=2
 syndaemon -i 0.4 -t -K -R &
 setxkbmap -option terminate:ctrl_alt_bksp
 xset r rate 400
-compton -CGb --no-fading-openclose --unredir-if-possible &
+compton -b &
 
 eval $(ssh-agent)
 
