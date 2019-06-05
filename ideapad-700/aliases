@@ -11,6 +11,10 @@ alias find-broken="find . -type l ! -exec test -e {} \; -print"
 
 alias ls="ls --color=tty --group-directories-first"
 
+alias odu="systemctl start openvpn-client@damirs"
+alias ods="systemctl status openvpn-client@damirs"
+alias odd="systemctl stop openvpn-client@damirs"
+
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export FZF_DEFAULT_OPTS='--height 30% --reverse --border'
