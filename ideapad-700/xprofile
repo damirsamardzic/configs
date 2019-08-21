@@ -9,6 +9,7 @@ syndaemon -i 0.4 -t -K -R &
 setxkbmap -option terminate:ctrl_alt_bksp
 xset r rate 400
 compton -b &
+nm-applet &
 
 eval $(ssh-agent)
 

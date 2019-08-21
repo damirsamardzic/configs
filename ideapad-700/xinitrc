@@ -18,6 +18,7 @@ synclient TapButton3=2
 syndaemon -i 0.4 -t -K -R &
 
 compton -b
+nm-applet &
 
 eval $(ssh-agent)
 
