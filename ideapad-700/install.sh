@@ -38,6 +38,7 @@ cp -f i3tree ~/.i3tree
 chmod +x ~/.i3tree
 
 cp -f ckermit-ttyUSB0 ~/.ckermit-ttyUSB0
+sudo cp ckermit-usb /usr/local/bin/
 
 sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
 
@@ -53,6 +54,8 @@ echo "and rebuild grub conf: # sudo grub-mkconfig -o /boot/grub/grub.cfg"
 echo
 echo "Add the following to /etc/environment when using just window manager:"
 echo "NO_AT_BRIDGE=1"
+echo
+echo "Optionally add TERMINAL=termite to /etc/environment or other term if needed"
 echo
 echo "Set keyboard layout with localectl, ie. localectl set-x11-keymap hr"
 echo
