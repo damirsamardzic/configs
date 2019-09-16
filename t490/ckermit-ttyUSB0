@@ -1,0 +1,18 @@
+;To run ckermit as unprivileged user:
+; sudo cp /usr/lib/tmpfiles.d/legacy.conf /etc/tmpfiles.d
+; sudo vi /etc/tmpfiles.d/legacy.conf
+;and modify lock directory group and permission:
+;d /run/lock 0775 root uucp -
+;L /var/lock - - - - ../run/lock
+set line /dev/ttyUSB0
+set speed 115200
+set carrier-watch off
+set flow-control none
+set handshake none
+set prefixing all
+set streaming off
+set parity none
+;set session-log binary
+;log session /tmp/ckermit-USB0.log
+connect
+exit

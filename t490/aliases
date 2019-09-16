@@ -1,0 +1,25 @@
+# my aliases
+#alias urxvt='_C="xyxyxy" ; _CC="${_C//x/$(( RANDOM % 3 ))}";  _CCC=${_CC//y/$(( RANDOM % 9 ))}; urxvt -bg "#${_CCC}"'
+alias vup="pactl set-sink-volume 0 +5%"
+alias vdown="pactl set-sink-volume 0 -5%"
+alias vmute="pactl set-sink-mute 0 toggle"
+
+alias gin="git fetch && git log --pretty=oneline --abbrev-commit ..@{u}"
+alias gout="git log --pretty=oneline --abbrev-commit @{u}.."
+
+alias find-broken="find . -type l ! -exec test -e {} \; -print"
+
+alias ls="ls --color=tty --group-directories-first"
+
+alias odu="systemctl start openvpn-client@damirs"
+alias ods="systemctl status openvpn-client@damirs"
+alias odd="systemctl stop openvpn-client@damirs"
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+export FZF_DEFAULT_OPTS='--height 30% --reverse --border'
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview' --exact --no-sort"
+
+export VISUAL=vim
+export EDITOR=vim
+

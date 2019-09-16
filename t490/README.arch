@@ -1,0 +1,17 @@
+Arch Linux installation
+
+Sources:
+https://wiki.archlinux.org/index.php/installation_guide
+https://hvarga.github.io/pages/the-ultimate-open-source-development-environment/
+http://tutos.readthedocs.io/en/latest/source/Arch.html
+
+Steps:
+* partition disk and mount root to /mnt
+* check Internet connection (use wifi-menu for wireless)
+* change keyboard: loakeys croat
+* run pacstrap:
+$ pacstrap -i /mnt base base-devel zsh zsh-completions polkit git
+* ...
+* clone this git repo and install configurations + all other packages
+$ cd configs/<laptop>/
+$ . ./install.sh

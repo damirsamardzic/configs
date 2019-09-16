@@ -1,0 +1,3 @@
+# copy this to /etc/udev/rules.d/ and reload udev with: udevadm control --reload-rules
+#KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/damirs/.Xauthority", RUN+="/home/damirs/.screenlayout/hotplug.sh"
+KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/damirs/.Xauthority", RUN+="/usr/bin/systemctl start monitor-hotplug.service"

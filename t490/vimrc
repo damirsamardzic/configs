@@ -1,0 +1,69 @@
+set nocompatible
+filetype plugin on
+filetype indent on
+syntax on
+set number
+set mouse=a
+set nobackup
+set nowb
+set noswapfile
+set nofoldenable
+set showtabline=2
+set cursorline
+set ruler
+highlight CursorLine cterm=NONE ctermbg=DarkGray ctermfg=White
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+set clipboard=unnamedplus
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+set wildmenu
+nnoremap d "_d
+vnoremap d "_d
+nnoremap D "_D
+vnoremap D "_D
+map <C-Left> <C-w>h
+map <C-Down> <C-w>j
+map <C-Up> <C-w>k
+map <C-Right> <C-w>l
+map <S-Right> :tabn<CR>
+map <S-Left>  :tabp<CR>
+set backspace=indent,eol,start
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
+command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+set belloff=all
+set scrolloff=10
+
+" vim-plug, install: curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+"Plug 'scrooloose/syntastic'
+"Plug 'vim-airline/vim-airline'
+
+call plug#end()
+
+" plugin configs
+set laststatus=2
+map <C-n> :NERDTreeToggle<CR>
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:airline#extensions#tabline#enabled = 1
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+let g:lightline                  = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
