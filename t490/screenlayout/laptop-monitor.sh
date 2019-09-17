@@ -1,2 +1,2 @@
 #!/bin/sh
-xrandr --output HDMI-1 --pos 1920x0 --auto --rotate normal --output eDP-1 --primary --pos 0x0 --auto --rotate normal
+xrandr --output eDP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off

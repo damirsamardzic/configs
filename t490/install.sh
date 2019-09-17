@@ -31,7 +31,8 @@ cp -f xprofile ~/.xprofile
 
 cp -f vimrc ~/.vimrc
 
-cp -ra screenlayout ~/.screenlayout
+mkdir -p ~/.screenlayout
+cp -f screenlayout/* ~/.screenlayout/
 
 cp gitconfig ~/.gitconfig
 

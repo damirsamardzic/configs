@@ -215,6 +215,7 @@ bindsym $mod+k mode "$mode_keymap"
 
 #change monitor layout Fn key, which is Super+p
 bindsym Mod4+p exec --no-startup-id /home/damirs/.screenlayout/hotplug.sh
+bindsym XF86Display exec --no-startup-id /home/damirs/.screenlayout/hotplug.sh
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
@@ -263,14 +264,8 @@ bindsym --release $mod+cacute exec --no-startup-id xdotool key --clearmodifiers 
 bindsym $mod+c exec gsimplecal || zenity --calendar
 
 # Sreen brightness controls
-# git clone http://github.com/multiplexd/brightlight
-# sudo pacman -S libbsd
-# cd brightlight
-# verify: ll /sys/class/backlight/intel_backlight
-# gcc -o brightlight brightlight.c -lbsd
-# chmod u+s brightlight
-bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 12 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 12 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
