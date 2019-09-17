@@ -255,6 +255,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% ||
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -5% || pactl set-sink-volume 1 -5%  && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
 # mute volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle && pactl set-source-mute 1 toggle
 
 # $mod+ž play/pause
 bindsym --release $mod+zcaron exec --no-startup-id xdotool key --clearmodifiers XF86AudioPlay
@@ -297,4 +298,6 @@ exec --no-startup-id "sleep 5 && dropbox start -i"
 bindsym --release Print exec --no-startup-id scrot
 bindsym --release Shift+Print exec --no-startup-id scrot -s
 bindsym --release Ctrl+Print exec --no-startup-id scrot -u
+
+bindsym --release XF86Tools exec --no-startup-id nm-connection-editor
 
