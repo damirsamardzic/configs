@@ -231,7 +231,7 @@ bindsym --release button2 kill
 
 
 bindsym $mod+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -terminal i3-sensible-terminal"
-bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -run-command 'gksudo {cmd}' -terminal i3-sensible-terminal -theme Pop-Dark"
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -run-command 'pkexec-wrapper {cmd}' -terminal i3-sensible-terminal -theme Pop-Dark"
 bindsym $mod+Tab exec --no-startup-id "rofi -show window -font 'Fira Sans Medium 12'"
 
 for_window [instance="vlc"] floating enable
