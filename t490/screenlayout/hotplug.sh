@@ -23,7 +23,7 @@ function disconnect(){
 }
 
 if [ -n "$DISPLAY" ]; then
-xrandr | grep "HDMI1 connected" &> /dev/null && connect || disconnect
+xrandr | grep "HDMI2 connected" &> /dev/null && connect || disconnect
 [ -f $FEHBG ] && $FEHBG
 fi
 
