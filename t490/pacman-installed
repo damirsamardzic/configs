@@ -230,4 +230,6 @@ tree
 pdfgrep
 pinta
 polkit-gnome
+lshw
+qt5ct
 
