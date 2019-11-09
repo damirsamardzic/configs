@@ -6,6 +6,7 @@ alias vmute="pactl set-sink-mute 0 toggle"
 
 alias gin="git fetch && git log --pretty=oneline --abbrev-commit ..@{u}"
 alias gout="git log --pretty=oneline --abbrev-commit @{u}.."
+alias gbav="git branch -avv"
 
 alias find-broken="find . -type l ! -exec test -e {} \; -print"
 

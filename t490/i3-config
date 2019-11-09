@@ -295,9 +295,9 @@ exec --no-startup-id "parcellite -n"
 
 exec --no-startup-id "sleep 5 && dropbox start -i"
 
-bindsym --release Print exec --no-startup-id scrot
-bindsym --release Shift+Print exec --no-startup-id scrot -s
-bindsym --release Ctrl+Print exec --no-startup-id scrot -u
+bindsym --release Print exec --no-startup-id scrot -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release Shift+Print exec --no-startup-id scrot -s -f -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release Ctrl+Print exec --no-startup-id scrot -u -e 'xclip -selection clipboard -target image/png -i $f'
 
 bindsym --release XF86Tools exec --no-startup-id nm-connection-editor
 

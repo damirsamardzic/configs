@@ -44,7 +44,6 @@ arc-solid-gtk-theme
 meld
 zeal
 ckermit
-gnu-netcat
 quilt
 libuv
 socat
@@ -190,14 +189,11 @@ libwebsockets
 cmocka
 pygmentize
 jdk10-openjdk
-pcmanfm-gtk3
 vagrant
 virtualbox
 termite
 atop
 blueman
-pgadmin4
-gutenprint
 xcursor-themes
 qt5-quickcontrols
 lightdm
@@ -232,4 +228,17 @@ pinta
 polkit-gnome
 lshw
 qt5ct
+screen
+picocom
+expect
+networkmanager-openvpn
+nload
+networkmanager-pptp
+pygtk
+xclip
+d-compiler
+openbsd-netcat
+ebtables
+dnsmasq
+retext
 

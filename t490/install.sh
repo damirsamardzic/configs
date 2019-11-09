@@ -40,6 +40,7 @@ cp -f i3tree ~/.i3tree
 chmod +x ~/.i3tree
 
 cp -f ckermit-ttyUSB0 ~/.ckermit-ttyUSB0
+cp -f ckermit-command ~/.ckermit-command
 sudo cp ckermit-usb /usr/local/bin/
 
 sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
