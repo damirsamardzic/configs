@@ -181,8 +181,8 @@ set $Locker i3lock -ec 000000 && sleep 1
 #set $Locker i3lock -ef -c 000000 -i $lockimage && sleep 1
 bindsym $mod+l exec --no-startup-id $Locker
 
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r)reboot, (Shift+s) shutdown
-set $mode_system System: (l) lock, (e) logout, (s) sleep, (h) hibernate, (d) hybrid-sleep, (r)reboot, (Shift+s) shutdown  |  Monitor: (o) laptop-only, (b) laptop-monitor, (m) monitor-only
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System: (l) lock, (e) logout, (s) sleep, (h) hibernate, (d) hybrid-sleep, (r) reboot, (Shift+s) shutdown  |  Monitor: (o) LCD, (i) HDMI-LCD, (b) DP-LCD, (m) DP-DP, (p) DP
 mode "$mode_system" {
   bindsym l exec --no-startup-id $Locker, mode "default"
   # run laptop-only.sh script to have only laptop display output
@@ -193,9 +193,11 @@ mode "$mode_system" {
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
-  bindsym o exec --no-startup-id /home/damirs/.screenlayout/laptop-only.sh, mode "default"
-  bindsym b exec --no-startup-id /home/damirs/.screenlayout/laptop-monitor.sh, mode "default"
-  bindsym m exec --no-startup-id /home/damirs/.screenlayout/monitor-only.sh, mode "default"
+  bindsym o exec --no-startup-id /home/damirs/.screenlayout/eDP1.sh, mode "default"
+  bindsym i exec --no-startup-id /home/damirs/.screenlayout/HDMI2__eDP1.sh, mode "default"
+  bindsym b exec --no-startup-id /home/damirs/.screenlayout/DP2-2__eDP1.sh, mode "default"
+  bindsym m exec --no-startup-id /home/damirs/.screenlayout/DP2-2.sh && /home/damirs/.screenlayout/DP2-2__DP2-3.sh, mode "default"
+  bindsym p exec --no-startup-id /home/damirs/.screenlayout/DP2-2.sh, mode "default"
   
   # back to normal: Enter or Escape
   bindsym Return mode "default"
@@ -240,20 +242,20 @@ for_window [class="Plexamp"] floating enable
 for_window [class="TeamViewer"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 #for_window [class="Virt-manager"] floating enable
+for_window [class="copyq"] floating enable
 
 assign [class="Xsane"] 8
 assign [class="qemu-system-i386"] 9
 assign [class="ViberPC"] 10
 
-#exec --no-startup-id "pasystray"
-#exec --no-startup-id "pulseaudio --start"
 # Pulse Audio controls
+set $VolPercent 2
 # increase volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
-bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +"$VolPercent"% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +"$VolPercent"% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
 # decrease volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
-bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -"$VolPercent"% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
+bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -"$VolPercent"% && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
 # mute volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && dunstify -i audio-speakers -t 2000 -r 20 "$(~/.config/i3/pavolume)"
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle && pactl set-source-mute 1 toggle
@@ -285,11 +287,11 @@ bindsym $mod+b exec i3-msg border toggle
 
 # wallpaper
 #exec_always --no-startup-id "feh --bg-fill --bg-fill ~/Dropbox/Photos/Wallpapers/pure_black.jpg"
-exec_always --no-startup-id "feh --bg-fill --bg-fill $wallimage"
+exec_always --no-startup-id "feh --bg-fill --bg-fill --bg-fill $wallimage"
 
 
 exec --no-startup-id "dunst"
-exec --no-startup-id "parcellite -n"
+exec --no-startup-id "copyq"
 
 # instead use systemctl enable devmon@damirs
 #exec --no-startup-id "devmon --no-gui"

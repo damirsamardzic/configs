@@ -20,6 +20,7 @@ syndaemon -i 0.4 -t -K -R &
 
 compton -b
 nm-applet &
+pasystray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 eval $(ssh-agent)

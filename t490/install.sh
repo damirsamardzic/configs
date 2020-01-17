@@ -47,6 +47,9 @@ sudo cp disable-lid-wakeup.conf /etc/tmpfiles.d/
 
 cp -f compton.conf ~/.config/
 
+mkdir -p ~/.config/copyq
+cp copyq* ~/.config/copyq/
+
 echo Done.
 echo "Now install oh-my-zsh from https://github.com/robbyrussell/oh-my-zsh/"
 echo "and then perform: # cat aliases >> ~/.zshrc"

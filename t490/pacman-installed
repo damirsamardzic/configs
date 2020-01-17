@@ -37,7 +37,6 @@ pulseaudio-alsa
 pulseaudio
 pavucontrol
 libbsd
-parcellite
 ranger
 arc-gtk-theme
 arc-solid-gtk-theme
@@ -241,4 +240,5 @@ openbsd-netcat
 ebtables
 dnsmasq
 retext
+copyq
 
