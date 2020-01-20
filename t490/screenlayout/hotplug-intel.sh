@@ -13,7 +13,7 @@ LOG=/dev/null
 LOG=/tmp/hotplug.log
 date >> $LOG
 
-LAYOUTCMD="eDP-1.sh"
+LAYOUTCMD="eDP1.sh"
 
 sync
 xrandr >/dev/null 2<&1 || true
@@ -21,17 +21,17 @@ xrandr >/dev/null 2<&1 || true
 
 
 if [ -n "$DISPLAY" ]; then
-    if xrandr | grep -q "DP-2-2 connected" &> /dev/null; then
-        LAYOUTCMD="DP-2-2__eDP-1.sh";
+    if xrandr | grep -q "DP2-2 connected" &> /dev/null; then
+        LAYOUTCMD="DP2-2__eDP1.sh";
         /home/$USERNAME/.screenlayout/$LAYOUTCMD >> $LOG 2>&1
         sleep 1
-        if xrandr | grep -q "DP-2-3 connected" &> /dev/null; then
-            LAYOUTCMD="DP-2-2__DP-2-3__eDP-1.sh"
+        if xrandr | grep -q "DP2-3 connected" &> /dev/null; then
+            LAYOUTCMD="DP2-2__DP2-3__eDP1.sh"
         fi
-    elif xrandr | grep -q "DP-2-3 connected" &> /dev/null; then
-        LAYOUTCMD="DP-2-3__eDP-1.sh"
-    elif xrandr | grep -q "HDMI-2 connected" &> /dev/null; then
-        LAYOUTCMD="HDMI-2__eDP-1.sh"
+    elif xrandr | grep -q "DP2-3 connected" &> /dev/null; then
+        LAYOUTCMD="DP2-3__eDP1.sh"
+    elif xrandr | grep -q "HDMI2 connected" &> /dev/null; then
+        LAYOUTCMD="HDMI2__eDP1.sh"
     fi
     /home/$USERNAME/.screenlayout/$LAYOUTCMD >> $LOG 2>&1
     sleep 1
