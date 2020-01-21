@@ -271,9 +271,13 @@ bindsym --release $mod+cacute exec --no-startup-id xdotool key --clearmodifiers 
 
 bindsym $mod+c exec gsimplecal || LC_TIME=hr_HR.UTF-8 zenity --calendar
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
+# Sreen brightness controls with xf86-video-intel driver
+#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
+#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
+
+# Sreen brightness controls with modesetting driver
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d intel_backlight s +2% && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight s 2%- && dunstify -i display -t 2000 -r 10 "$(~/.config/i3/brightness)"  # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad

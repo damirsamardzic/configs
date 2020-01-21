@@ -240,4 +240,5 @@ ebtables
 dnsmasq
 retext
 copyq
+brightnessctl
 
