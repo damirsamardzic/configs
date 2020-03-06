@@ -183,7 +183,7 @@ set $Locker i3lock -ec 000000 && sleep 1
 bindsym $mod+l exec --no-startup-id $Locker
 
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-set $mode_system System: (l) lock, (e) logout, (s) sleep, (h) hibernate, (d) hybrid-sleep, (r) reboot, (Shift+s) shutdown  |  Monitor: (o) LCD, (i) HDMI-LCD, (b) DP-LCD, (m) DP-DP, (p) DP
+set $mode_system System: (l) lock, (e) logout, (s) sleep, (h) hibernate, (d) hybrid-sleep, (r) reboot, (Shift+s) shutdown  |  Monitor: (o) LCD, (i) HDMI-LCD, (b) DP-LCD, (m) DP-DP, (p) DP                 
 mode "$mode_system" {
   bindsym l exec --no-startup-id $Locker, mode "default"
   # run laptop-only.sh script to have only laptop display output

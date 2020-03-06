@@ -4,7 +4,8 @@
 #bold_is_bright = true
 clickable_url = false
 #dynamic_title = true
-font = Monospace 10
+#font = Monospace 10
+font = Hack 10.5
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -52,10 +53,11 @@ cursor_shape = block
 #background = rgba(63, 63, 63, 0.8)
 
 background = #000000
-foreground = #DEDEDE
+#foreground = #DEDEDE
+foreground = #EEEEEE
 
 # If unset, will reverse foreground and background
-highlight = #86a2b0
+#highlight = #86a2b0
 
 # black
 color0  = #2E3436
