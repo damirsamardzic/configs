@@ -30,15 +30,13 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
 
 ethernet eth0 {
-        # if you use %speed, i3status requires root privileges
-        format_up = "USB-E: %ip (%speed)"
-        format_down = "USB-E: down"
+        format_up = "MO-E: %ip (%speed)"
+        format_down = "MO-E: down"
 }
 
 battery all {

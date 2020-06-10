@@ -9,7 +9,7 @@ synclient CoastingSpeed=0
 syndaemon -i 0.4 -t -K -R &
 setxkbmap -option terminate:ctrl_alt_bksp
 xset r rate 400
-compton -b &
+picom -b &
 nm-applet &
 pasystray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

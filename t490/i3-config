@@ -79,6 +79,7 @@ bindsym $mod+Shift+Right move right
 
 # move current workspace to monitor on the right
 bindsym $mod+m move workspace to output left
+bindsym $mod+Shift+m move workspace to output up
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -104,7 +105,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -196,7 +197,8 @@ mode "$mode_system" {
 
   bindsym o exec --no-startup-id /home/damirs/.screenlayout/eDP-1.sh, mode "default"
   bindsym i exec --no-startup-id /home/damirs/.screenlayout/HDMI-2__eDP-1.sh, mode "default"
-  bindsym b exec --no-startup-id /home/damirs/.screenlayout/DP-2-2__eDP-1.sh, mode "default"
+  #bindsym b exec --no-startup-id /home/damirs/.screenlayout/DP-2-2__eDP-1.sh, mode "default"
+  bindsym b exec --no-startup-id /home/damirs/.screenlayout/DP-2-2__eDP-1__vertical.sh, mode "default"
   #bindsym m exec --no-startup-id /home/damirs/.screenlayout/DP2-2.sh && /home/damirs/.screenlayout/DP2-2__DP2-3.sh, mode "default"
   bindsym m exec --no-startup-id /home/damirs/.screenlayout/DP-2-2__DP-2-3.sh, mode "default"
   bindsym p exec --no-startup-id /home/damirs/.screenlayout/DP-2-2.sh, mode "default"
@@ -234,8 +236,8 @@ bindsym --release button2 kill
 #bindsym $mod+button3 floating toggle
 
 
-bindsym $mod+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -terminal i3-sensible-terminal"
-bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -run-command 'pkexec-wrapper {cmd}' -terminal i3-sensible-terminal -theme Pop-Dark"
+bindsym $mod+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -terminal i3-sensible-terminal -modi window,run,ssh,drun"
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -font 'Fira Sans Medium 12' -run-command 'pkexec-wrapper {cmd}' -terminal i3-sensible-terminal -modi window,run,ssh,drun -theme Pop-Dark"
 bindsym $mod+Tab exec --no-startup-id "rofi -show window -font 'Fira Sans Medium 12'"
 
 for_window [instance="vlc"] floating enable
@@ -246,6 +248,7 @@ for_window [class="Gnome-calculator"] floating enable
 #for_window [class="Virt-manager"] floating enable
 for_window [class="copyq"] floating enable
 
+#assign [class="Evince"] 5
 assign [class="Xsane"] 8
 assign [class="qemu-system-i386"] 9
 assign [class="ViberPC"] 10
@@ -282,11 +285,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backli
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
 
-# i3 tree
-#for_window [title="^i3tree$"] floating enable
-#bindsym $mod+t exec i3-sensible-terminal -hold -title i3tree -e ~/.i3tree
+bindsym $mod+t exec i3-msg sticky toggle
 
 focus_follows_mouse no
+mouse_warping none
 
 # toggle window border
 bindsym $mod+b exec i3-msg border toggle
@@ -296,8 +298,9 @@ bindsym $mod+b exec i3-msg border toggle
 exec_always --no-startup-id "feh --bg-fill --bg-fill --bg-fill $wallimage"
 
 
-exec --no-startup-id "dunst"
+#exec --no-startup-id "dunst"
 exec --no-startup-id "copyq"
+bindsym $mod+Shift+h exec --no-startup-id "killall copyq; copyq"
 
 # instead use systemctl enable devmon@damirs
 #exec --no-startup-id "devmon --no-gui"
