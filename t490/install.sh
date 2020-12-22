@@ -23,6 +23,9 @@ chmod +x ~/.config/i3status/i3status.sh
 mkdir -p ~/.config/termite
 cp -f termite-config ~/.config/termite/config
 
+mkdir -p ~/.config/i3status-rust
+cp -f i3status-rust-config.toml ~/.config/i3status-rust/config.toml
+
 cp -f Xresources ~/.Xresources
 ln -sf ~/.Xresources ~/.Xdefaults
 

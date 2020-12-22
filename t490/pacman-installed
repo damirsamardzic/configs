@@ -105,8 +105,6 @@ geany
 geany-plugins
 wireshark-qt
 libreoffice-fresh
-texlive-most
-texstudio
 mercurial
 cmake
 json-c
@@ -241,4 +239,6 @@ dnsmasq
 retext
 copyq
 brightnessctl
+flameshot
+i3status-rust
 

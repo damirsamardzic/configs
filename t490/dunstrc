@@ -12,8 +12,8 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "340x6-10-30"
-    transparency = 25
+    geometry = "340x6-10+30"
+    transparency = 15
     idle_threshold = 120
     follow = none
     sticky_history = yes
@@ -24,20 +24,20 @@
     separator_color = "#585858"
     startup_notification = false
     frame_width = 1
-    frame_color = "4c7899"
+    frame_color = "#4c789900"
 
 [urgency_low]
-    background = "#285577"
+    background = "#285577CC"
     foreground = "#FFFFFF"
     timeout = 10
 
 [urgency_normal]
-    background = "#285577"
+    background = "#285577CC"
     foreground = "#FFFFFF"
     timeout = 20
 
 [urgency_critical]
-    background = "#801515"
+    background = "#801515CC"
     foreground = "#FFFFFF"
     timeout = 0
 

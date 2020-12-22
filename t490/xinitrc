@@ -18,7 +18,7 @@ synclient TapButton3=2
 synclient CoastingSpeed=0
 syndaemon -i 0.4 -t -K -R &
 
-compton -b
+picom -b
 nm-applet &
 pasystray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

@@ -1,0 +1,41 @@
+theme = "plain"
+icons = "awesome5"
+
+[[block]]
+block = "networkmanager"
+on_click = '''zsh -c "kill -SIGUSR1 $(pidof i3status-rs)"'''
+interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*", "veth.*", "virbr.*"]
+interface_name_include = []
+ap_format = " {ssid} {strength}%/{freq}MHz"
+device_format = "{icon}{name}:{ap} {ips}"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 10.0
+alert = 5.0
+
+[[block]]
+block = "load"
+interval = 5
+format = "{1m}"
+
+[[block]]
+block = "sound"
+step_width = 2
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}% {time}"
+
+[[block]]
+block = "time"
+on_click = "gsimplecal"
+interval = 5
+format = "%v (%V) %T"
+locale = "hr_HR"
