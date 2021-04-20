@@ -6,14 +6,14 @@ block = "networkmanager"
 on_click = '''zsh -c "kill -SIGUSR1 $(pidof i3status-rs)"'''
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*", "veth.*", "virbr.*"]
 interface_name_include = []
-ap_format = " {ssid} {strength}%/{freq}MHz"
+ap_format = " {ssid} {strength}/{freq}MHz"
 device_format = "{icon}{name}:{ap} {ips}"
 
 [[block]]
 block = "disk_space"
 path = "/"
-alias = "/"
 info_type = "available"
+format = "{icon} {available}"
 unit = "GB"
 interval = 20
 warning = 10.0
@@ -31,11 +31,11 @@ step_width = 2
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage}% {time}"
+format = "{percentage} {time}"
 
 [[block]]
 block = "time"
 on_click = "gsimplecal"
 interval = 5
-format = "%v (%V) %T"
+format = "%d.%m.%Y (%V) %T"
 locale = "hr_HR"

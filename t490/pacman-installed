@@ -241,4 +241,5 @@ copyq
 brightnessctl
 flameshot
 i3status-rust
+autorandr
 
