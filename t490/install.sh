@@ -23,8 +23,13 @@ chmod +x ~/.config/i3status/i3status.sh
 mkdir -p ~/.config/termite
 cp -f termite-config ~/.config/termite/config
 
+mkdir -p ~/.config/alacritty
+cp -f alacritty.xml ~/.config/alacritty/
+
 mkdir -p ~/.config/i3status-rust
 cp -f i3status-rust-config.toml ~/.config/i3status-rust/config.toml
+
+cp -a autorandr ~/.config/
 
 cp -f Xresources ~/.Xresources
 ln -sf ~/.Xresources ~/.Xdefaults
