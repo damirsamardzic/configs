@@ -139,15 +139,15 @@ font:
     style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: Hack
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    style: Bold Italic
 
   # Point size
   size: 10
@@ -448,6 +448,9 @@ draw_bold_text_with_bright_colors: true
     # clicking on them. The available modifiers are documented in the key
     # binding section.
     #modifiers: None
+mouse:
+  url:
+    modifiers: Shift
 
 # Mouse bindings
 #
@@ -788,6 +791,8 @@ draw_bold_text_with_bright_colors: true
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward    }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward   }
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 
 #debug:
   # Display the time it takes to redraw each frame.
